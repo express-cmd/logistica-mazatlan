@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mapa Logístico Directo - Mazatlán</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2>Logística Mazatlán</h2>
+            <p class="subtitle">Zonas en Tiempo Real vía Google API</p>
+            
+            <div class="section-card">
+                <h3>Buscar Código Postal</h3>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Ej: 82187, 82216">
+                    <button id="btnSearch" class="btn btn-success">Mapear</button>
+                    <button id="btnClear" class="btn btn-danger">Limpiar</button>
+                </div>
+                <small>Ingresa los CPs separados por comas para consultar a Google.</small>
+                <div id="statusLoad" class="status-text">Consola lista para consultas.</div>
+            </div>
+
+            <div class="section-card">
+                <h3>Herramientas de Resumen</h3>
+                <div class="export-buttons">
+                    <button id="btnExportCSV" class="btn btn-secondary">Exportar CSV</button>
+                    <button id="btnExportExcel" class="btn btn-secondary">Exportar Excel</button>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <h3>Códigos Postales Consultados</h3>
+                <div id="cpList" class="accordion-list"></div>
+            </div>
+        </aside>
+
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
